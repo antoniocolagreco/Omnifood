@@ -31,9 +31,15 @@ Pause anytime: Going on vacation? Just pause your subscription, and we refund un
 
 Tell us what you like (and what not): Never again waste time thinking about what to eat! Omnifood AI will create a 100% personalized weekly meal plan just for you. It makes sure you get all the nutrients and vitamins you need, no matter what diet you follow!
 
+Non sprecare più tempo nel pensare a cosa mangiare! L'IA di Omnifood creerà un piano alimentare settimanale personalizzato solo per te. Si assicurerà che tu assuma tutti i nutrienti e vitamine di cui hai bisogno, indipedentemente dalla dieta che segui!
+
 Approve your weekly meal plan: Once per week, approve the meal plan generated for you by Omnifood AI. You can change ingredients, swap entire meals, or even add your own recipes.
 
+Ogni settimana accetta il piano generato per te dalla IA di Ominifood. Puoi cambiare gli ingredienti, sostituire interi pasti e persino aggiungere le tue proprie ricette.
+
 Receive meals at convenient time: Best chefs in town will cook your selected meal every day, and we will deliver it to your door whenever works best for you. You can change delivery schedule and address daily!
+
+I migliori cuochi della zona cucineranno i tuoi pasti selezionati ogni giorno e noi li consegneremo alla tua porta quando preferisci. Puoi cambiare gli orari di consegna e l'indirizzo in ogni momento!
 
 ### Omnifood works with any diet
 
