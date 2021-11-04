@@ -521,3 +521,39 @@
   text-align: center;
   margin-top: 4.8rem;
 }
+
+.plan-additional-informations {
+  font-size: 1.6rem;
+  margin-bottom: 9.6rem;
+  line-height: 1.6;
+}
+
+.feature {
+}
+
+.feature-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: #e67e22;
+  color: #e67e22;
+}
+
+.feature-icon-container {
+  margin-bottom: 3.2rem;
+  background-color: #fae5d3;
+  border-radius: 50%;
+  padding: 1.6rem;
+  display: inline-block;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2.4rem;
+}
+
+.feature-description {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
