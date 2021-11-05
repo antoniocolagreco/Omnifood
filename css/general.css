@@ -47,7 +47,7 @@ html {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5) !important;
 }
 
 body {
@@ -127,6 +127,10 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid.five-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 strong {
   font-weight: 500;
 }
@@ -141,13 +145,13 @@ strong {
 .link:link,
 .link:visited {
   color: #e67e22;
-  border-bottom: 0.1rem solid currentColor;
+  border-bottom: 0.1rem solid transparent;
 }
 
 .link:hover,
 .link:active {
   color: #cf711f;
-  border-bottom: 0.1rem solid transparent;
+  border-bottom: 0.1rem solid currentColor;
 }
 
 /********************************/
@@ -164,6 +168,7 @@ strong {
   transition: all ease-in-out 0.2s;
   cursor: pointer;
   border: none;
+  box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .btn.secondary {
@@ -182,8 +187,8 @@ strong {
   /* background-color: #e67e22; */
   color: #fff;
   /* scale: 1.025; */
-  transform: translateY(-0.2rem);
-  box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  /* transform: translateY(-0.2rem); */
+  /* box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.2); */
 }
 
 .btn.secondary:link,
@@ -199,23 +204,24 @@ strong {
   /* background-color: #fff; */
   /* color: #555; */
   /* scale: 1.025; */
-  transform: translateY(-0.2rem);
-  box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+  /* transform: translateY(-0.2rem); */
+  /* box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.1); */
 }
 
 .btn.form {
   background-color: #45260a;
+  font-size: 1.8rem;
   color: #fae5d3;
   align-self: end;
   padding: 0.8rem 1.6rem;
   border-radius: 0.8rem;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .btn.form:hover,
 .btn.form:active {
   background-color: #fff;
   color: #45260a;
-  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.1);
 }
 
 /********************************/
