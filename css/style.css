@@ -95,6 +95,18 @@
   margin-bottom: 4.8rem;
 }
 
+.secondary-button-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.hero-button-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #555;
+}
+
 .hero-img {
   width: 100%;
 }
@@ -737,9 +749,12 @@
   text-decoration: none;
   color: #666;
   transition: ease-in-out 0.2s;
+  border-bottom: 0.1rem solid transparent;
+  padding-bottom: 0.1rem;
 }
 
 .footer-list li a:hover,
 .footer-list li a:active {
   color: #cf711f;
+  border-bottom: 0.1rem solid currentColor;
 }
