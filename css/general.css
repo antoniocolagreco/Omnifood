@@ -45,6 +45,11 @@ html {
   margin: 0;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
@@ -157,6 +162,8 @@ strong {
   font-size: 2rem;
   font-weight: 600;
   transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  border: none;
 }
 
 .btn.secondary {
@@ -194,6 +201,21 @@ strong {
   /* scale: 1.025; */
   transform: translateY(-0.2rem);
   box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn.form {
+  background-color: #45260a;
+  color: #fae5d3;
+  align-self: end;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+}
+
+.btn.form:hover,
+.btn.form:active {
+  background-color: #fff;
+  color: #45260a;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.1);
 }
 
 /********************************/

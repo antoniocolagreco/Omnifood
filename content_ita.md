@@ -79,6 +79,8 @@ Meal 2: Avocado Salad
 
 Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!
 
+Pasti salutari, gustosi e già pronti ti stanno aspettando. Inizia a mangiare bene da oggi. Puoi annullare o sospendere in ogni momento. Il primo pasto lo offriamo noi!
+
 ### We have 2 pricing plans
 
 Prices include all applicable taxes. Users can cancel at any time.

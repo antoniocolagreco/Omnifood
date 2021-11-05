@@ -528,9 +528,6 @@
   line-height: 1.6;
 }
 
-.feature {
-}
-
 .feature-icon {
   height: 2.4rem;
   width: 2.4rem;
@@ -556,4 +553,86 @@
 .feature-description {
   font-size: 1.8rem;
   line-height: 1.8rem;
+}
+
+/********************************/
+/* SECTION CALL TO ACTION */
+/********************************/
+
+.section-cta {
+  background-color: #fff;
+  padding: 9.6rem 0;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 9.6em;
+  /* height: 50rem; */
+  background-color: #e67e22;
+  box-shadow: 0 2.4rem 3.2rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1.6rem;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  overflow: hidden;
+  /* padding: 3.2rem; */
+}
+
+.cta-text-box {
+  color: #45260a;
+  padding: 6.4rem 0 6.4rem 6.4rem;
+}
+
+.cta-text-box .heading-2 {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.cta-form {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: #fae5d3;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #888;
+}
+
+.cta-form *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(250, 229, 211, 0.5);
+}
+
+.cta-img-box {
+  background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.3), rgba(230, 125, 34, 0.3)), url(./../img/eating.jpg);
+  background-size: cover;
+  /* border-radius: 1.6rem; */
 }
