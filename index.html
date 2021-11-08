@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omnifood</title>
-    <link href="./css/style.css" rel="stylesheet" />
-    <link href="./css/general.css" rel="stylesheet" />
     <link href="./css/fonts.css" rel="stylesheet" />
+    <link href="./css/general.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/queries.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- nav-open -->
     <header class="header">
       <a href="#"> <img src="img/omnifood-logo.png" alt="Ominifood logo" class="logo" /></a>
       <nav class="main-nav">
@@ -21,6 +23,15 @@
           <li><a href="#" class="main-nav-link nav-cta">Prova gratuitamente</a></li>
         </ul>
       </nav>
+      <button class="btn-mobile-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" class="btn-mobile-icon menu" viewBox="0 0 512 512">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="btn-mobile-icon close" viewBox="0 0 512 512">
+          <title>Close</title>
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368" />
+        </svg>
+      </button>
     </header>
     <main>
       <section class="section-hero">
@@ -28,15 +39,17 @@
           <div class="hero-text-box">
             <h1 class="heading-1">Un pasto gustoso e salutare consegnato a casa tua, tutti i giorni</h1>
             <p class="hero-description">Con il piano annuale Smart365 tornerai a mangiare sano. Creato su misura, in base ai tuoi gusti e le tue esigenze nutrizionali.</p>
-            <a href="#" class="btn primary margin-right-small margin-bottom-small">Inizia a mangiare sano</a>
-            <a href="#" class="btn secondary margin-bottom-small">
-              <div class="secondary-button-container">
-                <span>Maggiori informazioni</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="hero-button-icon" viewBox="0 0 512 512">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144" />
-                </svg>
-              </div>
-            </a>
+            <div class="hero-buttons-container">
+              <a href="#" class="btn primary">Inizia a mangiare sano</a>
+              <a href="#" class="btn secondary">
+                <div class="secondary-button-flex">
+                  <span>Maggiori informazioni</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="hero-button-icon" viewBox="0 0 512 512">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144" />
+                  </svg>
+                </div>
+              </a>
+            </div>
             <div class="delivered-meals">
               <div class="delivered-customers">
                 <img src="img/customers/customer-1.jpg" alt="Customer Photo" />
@@ -46,7 +59,7 @@
                 <img src="img/customers/customer-5.jpg" alt="Customer Photo" />
                 <img src="img/customers/customer-6.jpg" alt="Customer Photo" />
               </div>
-              <p class="delivered-text"><span>250.000+</span> pasti consegnati l'anno scorso!</p>
+              <p class="delivered-text">Oltre <span>250.000</span> pasti consegnati l'anno scorso!</p>
             </div>
           </div>
           <div class="hero-img-box"><img src="img/hero.png" class="hero-img" alt="Donna che mangia con piacere, vari pasti pronti." /></div>
@@ -55,7 +68,7 @@
 
       <section class="section-featured-in">
         <div class="container">
-          <h2 class="heading-featured-in">Apparso su</h2>
+          <h2 class="heading-featured-in">Hanno parlato di noi</h2>
           <div class="featured-in-logos">
             <a href="#"> <img src="img/logos/business-insider.png" alt="Business Insider logo" class="featured-in-logo" /></a>
             <a href="#"> <img src="img/logos/forbes.png" alt="Forbes logo" class="featured-in-logo" /></a>
@@ -100,7 +113,7 @@
       </section>
       <section class="section-meals">
         <div class="container center-text">
-          <span class="subheading">Pasti</span>
+          <span class="subheading">I nostri pasti</span>
           <h2 class="heading-2">La IA di Omnifood seleziona tra oltre 5.000 ricette!</h2>
         </div>
         <div class="container grid three-cols">
@@ -113,20 +126,24 @@
               <p class="meal-title">Gyozas giapponesi</p>
               <ul class="meal-attributes">
                 <li>
-                  <svg class="meal-icon" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.467 0c1.102.018 5.555 2.549 6.386 8.558.905-.889 1.409-3.664 1.147-4.843 3.952 2.969 6 6.781 6 11.034 0 5.094-3.43 9.251-8.963 9.251-5.728 0-9.037-3.753-9.037-8.276 0-6.26 5.052-7.62 4.467-15.724zm3.262 19.743c-.749.848-.368 1.945.763 2.045 1.035.093 1.759-.812 2.032-1.792.273-.978.09-2.02-.369-2.893-.998 1.515-1.52 1.64-2.426 2.64zm4.42 1.608c2.49-1.146 3.852-3.683 3.852-6.58 0-2.358-.94-4.977-2.5-7.04-.743 2.867-2.924 3.978-4.501 4.269.05-3.219-.318-6.153-2.602-8.438-.296 4.732-4.321 7.63-4.398 12.114-.029 1.511.514 3.203 1.73 4.415.491.489 1.054.871 1.664 1.16-.121-.608-.062-1.254.195-1.848.911-2.106 3.333-2.321 4.202-5.754.952.749 3.275 3.503 2.778 6.358-.082.469-.224.923-.42 1.344z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="meal-icon" viewBox="0 0 512 512">
+                    <path d="M112 320c0-93 124-165 96-272 66 0 192 96 192 272a144 144 0 01-288 0z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+                    <path d="M320 368c0 57.71-32 80-64 80s-64-22.29-64-80 40-86 32-128c42 0 96 70.29 96 128z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
                   </svg>
                   <span><strong>650</strong> calorie</span>
                 </li>
                 <li>
-                  <svg class="meal-icon" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.995 13v8.5c0 .374.343.5.5.5h.001c.276 0 .5-.224.5-.5 0 0 .008-16.774 0-19.265-.933 1.081-2.556 5.196-3.333 10.765h2.332zm.501 11c-1.203 0-2.501-.956-2.501-2.5v-6.501h-2.545c.136-4.058 2.442-14.999 5.738-14.999 1.007 0 1.801.811 1.807 1.845.01 1.348.001 19.655.001 19.655 0 1.378-1.122 2.5-2.5 2.5m-7.849-24h-6.315c-.28 1.447-1.071 5.458-1.309 7.853-.207 2.084 1.016 3.03 1.709 3.55.147.117.265.294.265.482.003 1.595.003 8.287.003 9.591 0 1.391.98 2.524 2.552 2.524 1.453 0 2.448-1.139 2.448-2.524v-9.538c0-.19.102-.369.251-.486.723-.531 1.991-1.464 1.755-3.638-.259-2.383-1.074-6.393-1.359-7.814m-1.476 2s.616 3.909.847 6.029c.13 1.212-.559 1.494-1.152 1.964-.791.626-.866 1.186-.866 1.771v9.609c0 .299-.09.627-.506.627-.417 0-.494-.346-.494-.627v-9.615c0-.574-.042-1.143-.828-1.773-.581-.466-1.275-.769-1.159-1.935.211-2.114.774-6.05.774-6.05h.476v5h.817l.139-5h.524l.123 5h.835l-.033-5h.503z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="meal-icon" viewBox="0 0 512 512">
+                    <path d="M352 128c-32.26-2.89-64 16-96 16s-63.75-19-96-16c-64 6-96 64-96 160 0 80 64 192 111.2 192s51.94-24 80.8-24 33.59 24 80.8 24S448 368 448 288c0-96-29-154-96-160z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+                    <path d="M323.92 83.14c-21 21-45.66 27-58.82 28.79a8 8 0 01-9.1-8.73 97.6 97.6 0 0128.61-59.33c22-22 46-26.9 58.72-27.85a8 8 0 018.67 8.92 98 98 0 01-28.08 58.2z" />
+                    <ellipse cx="216" cy="304" rx="24" ry="48" />
+                    <ellipse cx="296" cy="304" rx="24" ry="48" />
                   </svg>
                   <span>NutriScore&reg; <strong>74</strong></span>
                 </li>
                 <li>
-                  <svg class="meal-icon" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="meal-icon" viewBox="0 0 512 512">
+                    <path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" />
                   </svg>
                   <span>Valutazione <strong>4.9</strong> (537)</span>
                 </li>
@@ -143,20 +160,24 @@
               <p class="meal-title">Insalata di Avocado</p>
               <ul class="meal-attributes">
                 <li>
-                  <svg class="meal-icon" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.467 0c1.102.018 5.555 2.549 6.386 8.558.905-.889 1.409-3.664 1.147-4.843 3.952 2.969 6 6.781 6 11.034 0 5.094-3.43 9.251-8.963 9.251-5.728 0-9.037-3.753-9.037-8.276 0-6.26 5.052-7.62 4.467-15.724zm3.262 19.743c-.749.848-.368 1.945.763 2.045 1.035.093 1.759-.812 2.032-1.792.273-.978.09-2.02-.369-2.893-.998 1.515-1.52 1.64-2.426 2.64zm4.42 1.608c2.49-1.146 3.852-3.683 3.852-6.58 0-2.358-.94-4.977-2.5-7.04-.743 2.867-2.924 3.978-4.501 4.269.05-3.219-.318-6.153-2.602-8.438-.296 4.732-4.321 7.63-4.398 12.114-.029 1.511.514 3.203 1.73 4.415.491.489 1.054.871 1.664 1.16-.121-.608-.062-1.254.195-1.848.911-2.106 3.333-2.321 4.202-5.754.952.749 3.275 3.503 2.778 6.358-.082.469-.224.923-.42 1.344z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="meal-icon" viewBox="0 0 512 512">
+                    <path d="M112 320c0-93 124-165 96-272 66 0 192 96 192 272a144 144 0 01-288 0z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+                    <path d="M320 368c0 57.71-32 80-64 80s-64-22.29-64-80 40-86 32-128c42 0 96 70.29 96 128z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
                   </svg>
                   <span><strong>400</strong> calorie</span>
                 </li>
                 <li>
-                  <svg class="meal-icon" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.995 13v8.5c0 .374.343.5.5.5h.001c.276 0 .5-.224.5-.5 0 0 .008-16.774 0-19.265-.933 1.081-2.556 5.196-3.333 10.765h2.332zm.501 11c-1.203 0-2.501-.956-2.501-2.5v-6.501h-2.545c.136-4.058 2.442-14.999 5.738-14.999 1.007 0 1.801.811 1.807 1.845.01 1.348.001 19.655.001 19.655 0 1.378-1.122 2.5-2.5 2.5m-7.849-24h-6.315c-.28 1.447-1.071 5.458-1.309 7.853-.207 2.084 1.016 3.03 1.709 3.55.147.117.265.294.265.482.003 1.595.003 8.287.003 9.591 0 1.391.98 2.524 2.552 2.524 1.453 0 2.448-1.139 2.448-2.524v-9.538c0-.19.102-.369.251-.486.723-.531 1.991-1.464 1.755-3.638-.259-2.383-1.074-6.393-1.359-7.814m-1.476 2s.616 3.909.847 6.029c.13 1.212-.559 1.494-1.152 1.964-.791.626-.866 1.186-.866 1.771v9.609c0 .299-.09.627-.506.627-.417 0-.494-.346-.494-.627v-9.615c0-.574-.042-1.143-.828-1.773-.581-.466-1.275-.769-1.159-1.935.211-2.114.774-6.05.774-6.05h.476v5h.817l.139-5h.524l.123 5h.835l-.033-5h.503z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="meal-icon" viewBox="0 0 512 512">
+                    <path d="M352 128c-32.26-2.89-64 16-96 16s-63.75-19-96-16c-64 6-96 64-96 160 0 80 64 192 111.2 192s51.94-24 80.8-24 33.59 24 80.8 24S448 368 448 288c0-96-29-154-96-160z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+                    <path d="M323.92 83.14c-21 21-45.66 27-58.82 28.79a8 8 0 01-9.1-8.73 97.6 97.6 0 0128.61-59.33c22-22 46-26.9 58.72-27.85a8 8 0 018.67 8.92 98 98 0 01-28.08 58.2z" />
+                    <ellipse cx="216" cy="304" rx="24" ry="48" />
+                    <ellipse cx="296" cy="304" rx="24" ry="48" />
                   </svg>
                   <span>NutriScore&reg; <strong>92</strong></span>
                 </li>
                 <li>
-                  <svg class="meal-icon" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5.173l2.335 4.817 5.305.732-3.861 3.71.942 5.27-4.721-2.524-4.721 2.525.942-5.27-3.861-3.71 5.305-.733 2.335-4.817zm0-4.586l-3.668 7.568-8.332 1.151 6.064 5.828-1.48 8.279 7.416-3.967 7.416 3.966-1.48-8.279 6.064-5.827-8.332-1.15-3.668-7.569z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="meal-icon" viewBox="0 0 512 512">
+                    <path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" />
                   </svg>
                   <span>Valutazione <strong>4.8</strong> (441)</span>
                 </li>
@@ -164,59 +185,59 @@
             </div>
           </div>
           <div class="diet">
-            <p class="diet-title">Disponibile per ogni dieta!</p>
+            <p class="diet-title">Per tutte le diete!</p>
             <ul class="diet-list">
               <li>
-                <svg class="diet-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Vegetariana</span>
               </li>
               <li>
-                <svg class="diet-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Vegana</span>
               </li>
               <li>
-                <svg class="diet-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Pescetaria</span>
               </li>
               <li>
-                <svg class="diet-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Senza glutine</span>
               </li>
               <li>
-                <svg class="diet-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Senza lattosio</span>
               </li>
               <li>
-                <svg class="diet-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Chetogenica</span>
               </li>
               <li>
-                <svg class="diet-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Paleolitica</span>
               </li>
               <li>
-                <svg class="diet-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Bassi FODMAP</span>
               </li>
               <li>
-                <svg class="diet-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Per bambini</span>
               </li>
@@ -316,20 +337,20 @@
             </header>
             <ul class="plan-list">
               <li>
-                <svg class="plan-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>1 pasto al giorno</span>
               </li>
               <li>
-                <svg class="plan-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Ordini consegnati tra le 11 e le 19</span>
               </li>
               <li>
-                <svg class="plan-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Consegna gratuita</span>
               </li>
@@ -347,26 +368,26 @@
             </header>
             <ul class="plan-list">
               <li>
-                <svg class="plan-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span><strong>2 pasti</strong> al giorno</span>
               </li>
               <li>
-                <svg class="plan-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Ordini consegnati <strong>24 ore su 24</strong></span>
               </li>
               <li>
-                <svg class="plan-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>La consegna è gratuita</span>
               </li>
               <li>
-                <svg class="plan-list-icon" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="plan-list-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96" />
                 </svg>
                 <span>Accesso a <strong>pasti esclusivi</strong></span>
               </li>
@@ -379,15 +400,14 @@
         <div class="container center-text">
           <aside class="plan-additional-informations">
             <p>Tutti i prezzi sono comprensivi di IVA. Puoi annullare la sottoscrizione in qualunque momento.</p>
-            <!-- <p>Enbrambi i piani include le seguenti caratteristiche:</p> -->
           </aside>
         </div>
 
         <div class="container grid four-cols">
           <div class="feature">
             <div class="feature-icon-container">
-              <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.428 6c6.018 0 8.414 10 13.143 10 2.114 0 3.48-1.578 3.48-4s-1.366-4-3.48-4c-1.665 0-2.861 1.069-4.017 2.395l-1.244-1.562c1.499-1.532 3.049-2.833 5.26-2.833 3.198 0 5.43 2.455 5.43 6s-2.232 6-5.43 6c-6.003 0-8.406-10-13.142-10-2.113 0-3.479 1.578-3.479 4s1.365 4 3.479 4c1.664 0 2.86-1.068 4.015-2.392l1.244 1.561c-1.499 1.531-3.05 2.831-5.259 2.831-3.197 0-5.428-2.455-5.428-6s2.231-6 5.428-6z" />
+              <svg xmlns="http://www.w3.org/2000/svg" class="feature-icon" viewBox="0 0 512 512">
+                <path d="M256 256s-48-96-126-96c-54.12 0-98 43-98 96s43.88 96 98 96c37.51 0 71-22.41 94-48M256 256s48 96 126 96c54.12 0 98-43 98-96s-43.88-96-98-96c-37.51 0-71 22.41-94 48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" />
               </svg>
             </div>
             <p class="feature-title">Dimenticati della cucina!</p>
@@ -407,8 +427,8 @@
           </div>
           <div class="feature">
             <div class="feature-icon-container">
-              <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.787 7.531c-5.107 2.785-12.72 9.177-15.787 15.469h2.939c.819-2.021 2.522-4.536 3.851-5.902 8.386 3.747 17.21-2.775 17.21-11.343 0-1.535-.302-3.136-.92-4.755-2.347 3.119-5.647 1.052-10.851 1.625-7.657.844-11.162 6.797-8.764 11.54 3.506-3.415 9.523-6.38 12.322-6.634z" />
+              <svg xmlns="http://www.w3.org/2000/svg" class="feature-icon" viewBox="0 0 512 512">
+                <path d="M321.89 171.42C233 114 141 155.22 56 65.22c-19.8-21-8.3 235.5 98.1 332.7 77.79 71 197.9 63.08 238.4-5.92s18.28-163.17-70.61-220.58zM173 253c86 81 175 129 292 147" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
               </svg>
             </div>
             <p class="feature-title">Niente più rifiuti inquinanti</p>
@@ -416,8 +436,8 @@
           </div>
           <div class="feature">
             <div class="feature-icon-container">
-              <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z" />
+              <svg xmlns="http://www.w3.org/2000/svg" class="feature-icon" viewBox="0 0 512 512">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M176 96h16v320h-16zM320 96h16v320h-16z" />
               </svg>
             </div>
             <p class="feature-title">Sospendi il servizio quando vuoi</p>
