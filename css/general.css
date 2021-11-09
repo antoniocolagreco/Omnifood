@@ -38,6 +38,7 @@ WHITESPACES:
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -246,3 +247,7 @@ strong {
 .center-text {
   text-align: center !important;
 }
+
+/* .scroll-disabled {
+  overflow-y: hidden;
+} */

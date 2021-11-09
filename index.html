@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omnifood</title>
+    <title>Omnifood &dash; Ai tuoi pasti pensiamo noi!</title>
     <link href="./css/fonts.css" rel="stylesheet" />
     <link href="./css/general.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
     <link href="./css/queries.css" rel="stylesheet" />
+    <script defer src="./js/smoothscroll.js"></script>
+    <script defer src="./js/script.js"></script>
+    <meta name="description" content="Omnifood usa una IA per elaborare un piano alimento salutare, gustoso e nutriente per i propri clienti. I pasti verranno consegnati a domicilio quando il cliente desidera." />
+    <link rel="icon" href="./img/favicon.png" />
+    <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
   </head>
   <body>
     <!-- nav-open -->
@@ -16,11 +22,11 @@
       <a href="#"> <img src="img/omnifood-logo.png" alt="Ominifood logo" class="logo" /></a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#" class="main-nav-link">Come funziona</a></li>
-          <li><a href="#" class="main-nav-link">Pasti</a></li>
-          <li><a href="#" class="main-nav-link">I nostri clienti</a></li>
-          <li><a href="#" class="main-nav-link">Tariffe</a></li>
-          <li><a href="#" class="main-nav-link nav-cta">Prova gratuitamente</a></li>
+          <li><a href="#how" class="main-nav-link">Come funziona</a></li>
+          <li><a href="#meals" class="main-nav-link">I nostri Pasti</a></li>
+          <li><a href="#testimonials" class="main-nav-link">Dicono di noi</a></li>
+          <li><a href="#pricing" class="main-nav-link">Abbonamenti</a></li>
+          <li><a href="#cta" class="main-nav-link nav-cta">Prova gratis</a></li>
         </ul>
       </nav>
       <button class="btn-mobile-nav">
@@ -37,11 +43,11 @@
       <section class="section-hero">
         <div class="hero">
           <div class="hero-text-box">
-            <h1 class="heading-1">Un pasto gustoso e salutare consegnato a casa tua, tutti i giorni</h1>
+            <h1 class="heading-1">Un pasto salutare consegnato a casa tua, tutti i giorni</h1>
             <p class="hero-description">Con il piano annuale Smart365 tornerai a mangiare sano. Creato su misura, in base ai tuoi gusti e le tue esigenze nutrizionali.</p>
             <div class="hero-buttons-container">
-              <a href="#" class="btn primary">Inizia a mangiare sano</a>
-              <a href="#" class="btn secondary">
+              <a href="#cta" class="btn primary">Inizia a mangiare sano</a>
+              <a href="#how" class="btn secondary">
                 <div class="secondary-button-flex">
                   <span>Maggiori informazioni</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="hero-button-icon" viewBox="0 0 512 512">
@@ -62,7 +68,13 @@
               <p class="delivered-text">Oltre <span>250.000</span> pasti consegnati l'anno scorso!</p>
             </div>
           </div>
-          <div class="hero-img-box"><img src="img/hero.png" class="hero-img" alt="Donna che mangia con piacere, vari pasti pronti." /></div>
+          <div class="hero-img-box">
+            <picture>
+              <source srcset="./img/hero.webp" type="image/wepb" />
+              <source srcset="./img/hero-min.png" type="image/png" />
+              <img src="./img/hero-min.png" class="hero-img" alt="Donna che mangia con piacere, vari pasti pronti." />
+            </picture>
+          </div>
         </div>
       </section>
 
@@ -79,7 +91,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">Come funziona</span>
           <h2 class="heading-2">La tua dose quotidiana di salute in 3 semplici passi</h2>
@@ -111,7 +123,7 @@
           </div>
         </div>
       </section>
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">I nostri pasti</span>
           <h2 class="heading-2">La IA di Omnifood seleziona tra oltre 5.000 ricette!</h2>
@@ -248,9 +260,9 @@
           <a href="#" class="link">Guarda tutte le ricette &rarr;</a>
         </div>
       </section>
-      <section class="section-testimonials-gallery">
+      <section class="section-testimonials-gallery" id="testimonials">
         <div class="testimonial-container">
-          <span class="subheading">Cosa dicono i nostri clienti</span>
+          <span class="subheading">Cosa dicono di noi</span>
           <h2 class="heading-2">Non potrai più farne a meno!</h2>
           <div class="testimonials">
             <figure class="testimonial">
@@ -323,9 +335,9 @@
           </figure>
         </div>
       </section>
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
-          <span class="subheading">Tariffe</span>
+          <span class="subheading">Abbonamenti</span>
           <h2 class="heading-2">Mangia in modo salutare a prezzi convenienti</h2>
         </div>
         <div class="container grid margin-bottom-medium">
@@ -357,7 +369,7 @@
               <li><div style="height: 2.4rem" /></li>
             </ul>
             <div class="plan-sign-up">
-              <a href="#" class="btn primary">Inizia a mangiare sano</a>
+              <a href="#cta" class="btn primary">Inizia a mangiare sano</a>
             </div>
           </div>
           <div class="pricing-plan complete">
@@ -393,7 +405,7 @@
               </li>
             </ul>
             <div class="plan-sign-up">
-              <a href="#" class="btn primary">Inizia a mangiare sano</a>
+              <a href="#cta" class="btn primary">Inizia a mangiare sano</a>
             </div>
           </div>
         </div>
@@ -446,7 +458,7 @@
         </div>
       </section>
 
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -516,7 +528,7 @@
             </li>
           </ul>
 
-          <p class="copyright">Copyright &copy; 2021 by Omnifood Inc. All rights reserved.</p>
+          <p class="copyright">Copyright &copy; <span class="footer-year">2100</span> by Omnifood Inc. All rights reserved.</p>
         </div>
         <div class="footer-address">
           <p class="footer-heading">Contatti</p>

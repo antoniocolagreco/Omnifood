@@ -3,13 +3,12 @@
 /********************************/
 
 .header {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fae5d3;
   height: 9.6rem;
-  padding: 0 3.2rem;
+  padding: 3.2rem;
 }
 
 .logo {
@@ -71,6 +70,8 @@
   color: #fff;
 }
 
+/* MOBILE*/
+
 .btn-mobile-nav {
   display: none;
   border: none;
@@ -90,6 +91,23 @@
 
 .btn-mobile-icon.close {
   display: none;
+}
+
+/* STICKY*/
+.sticky .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.97);
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  height: 7.2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
 }
 
 /********************************/
