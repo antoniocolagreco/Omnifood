@@ -4,6 +4,7 @@ const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
 /////// MOBILE NAVIGATION
+const logoLink = document.querySelector(".logo-link");
 const htmlEl = document.querySelector("html");
 const bodyEl = document.querySelector("body");
 const headerEl = document.querySelector(".header");
@@ -13,14 +14,16 @@ const navMain = document.querySelector(".main-nav");
 
 let menuClicked = false;
 
-mobileButtonEl.addEventListener("click", () => toggleMenu());
+mobileButtonEl.addEventListener("click", () => toggleMenu(0, false));
 
-navLinkEls.forEach((navLink) => navLink.addEventListener("click", () => toggleMenu(500)));
+navLinkEls.forEach((navLink) => navLink.addEventListener("click", () => toggleMenu(500, false)));
+logoLink.addEventListener("click", () => toggleMenu(500, true));
 
 let menuIsOpen;
 let menuIsMobile;
 
-function toggleMenu(d) {
+function toggleMenu(d, closeOnly) {
+  if (closeOnly == null) closeOnly = false;
   if (d == null) d = 0;
 
   menuIsOpen = headerEl.classList.contains("nav-open");
@@ -33,12 +36,15 @@ function toggleMenu(d) {
       headerEl.classList.remove("nav-open");
       htmlEl.classList.remove("scroll-disabled");
     }, d);
-  } else if (menuIsMobile) {
+  } else if (menuIsMobile && !closeOnly) {
     headerEl.classList.add("nav-open");
     htmlEl.classList.add("scroll-disabled");
+    setTimeout(() => {
+      bodyEl.classList.add("sticky");
+    }, 500);
   }
 }
-/////// StICKY NAVIGATION
+/////// STICKY NAVIGATION
 
 const sectionHeroEl = document.querySelector(".section-hero");
 

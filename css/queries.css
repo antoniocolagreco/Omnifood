@@ -176,6 +176,10 @@
     visibility: hidden;
   }
 
+  .logo-link {
+    z-index: 999;
+  }
+
   .nav-open .main-nav {
     opacity: 1;
     pointer-events: visible;
@@ -271,6 +275,12 @@
   .pricing-plan.starter {
     justify-self: center;
   }
+}
+
+/********************************/
+/* 560px */
+/********************************/
+@media (max-width: 35em) {
   .featured-in-logos {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -283,12 +293,7 @@
   .featured-in-logos a:nth-child(5) {
     grid-column: span 3;
   }
-}
 
-/********************************/
-/* 560px */
-/********************************/
-@media (max-width: 35em) {
   .grid {
     row-gap: 4.8rem;
   }

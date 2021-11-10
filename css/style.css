@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fae5d3;
-  height: 9.6rem;
+  height: 8rem;
   padding: 3.2rem;
 }
 
@@ -102,12 +102,12 @@
   background-color: rgba(255, 255, 255, 0.97);
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
-  height: 7.2rem;
+  height: 8rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
 .sticky .section-hero {
-  margin-top: 9.6rem;
+  margin-top: 8rem;
 }
 
 /********************************/
@@ -490,7 +490,7 @@
 
 .section-pricing {
   background-color: #fff;
-  padding: 9.6rem 0;
+  padding: 9.6rem 0 4.8rem;
 }
 
 .pricing-plan {
@@ -624,7 +624,7 @@
 
 .section-cta {
   background-color: #fff;
-  padding: 4.8rem 0 12.8rem 0;
+  padding: 9.6rem 0 12.8rem 0;
 }
 
 .cta {
